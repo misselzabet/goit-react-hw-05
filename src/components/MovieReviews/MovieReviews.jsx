@@ -27,6 +27,7 @@ Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZmU4MmFmNDhhOGVkNmM2Yjgy
     fetchReviews();
   }, [movieId]);
 
+
   return (
     <div>
       {reviews.length > 0 ? (

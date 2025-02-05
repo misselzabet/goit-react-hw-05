@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import styles from './MovieCast.module.css';
 
+
+
 function MovieCast() {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
@@ -18,7 +20,7 @@ Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZmU4MmFmNDhhOGVkNmM2Yjgy
             },
           }
         );
-        setCast(response.data.cast);
+      setCast(response.data.cast);
       } catch (error) {
         console.error('Error fetching cast:', error);
       }
@@ -26,7 +28,7 @@ Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZmU4MmFmNDhhOGVkNmM2Yjgy
 
     fetchCast();
   }, [movieId]);
-
+ 
   return (
     <ul>
       {cast.map((actor) => (
@@ -39,4 +41,3 @@ Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZmU4MmFmNDhhOGVkNmM2Yjgy
 }
 
 export default MovieCast;
-
