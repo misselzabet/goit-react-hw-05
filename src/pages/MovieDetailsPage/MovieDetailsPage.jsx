@@ -14,7 +14,7 @@ function MovieDetailsPage() {
       try {
         const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}`, {
           headers: {
-            Authorization: `Bearer YOUR_API_READ_ACCESS_TOKEN`,
+Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZmU4MmFmNDhhOGVkNmM2YjgyYzhkNDhlZDZjNjIwOSIsIm5iZiI6MTczODc1NjQwMS45MTIsInN1YiI6IjY3YTM1MTMxNDRkNjg2M2I3NDhhNzdkYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cojCoauTo3EVNiiV2qO1cXAlSvfYmxVCEojjw4Kblno`,
           },
         });
         setMovie(response.data);
